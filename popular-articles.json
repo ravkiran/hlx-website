@@ -1,0 +1,24 @@
+{
+  "articles": [
+    {
+      "name": "Bladder Cancer",
+      "url": "https://example.com/cancer/bladder-cancer"
+    },
+    {
+      "name": "Skin Cancer",
+      "url": "https://example.com/cancer/skin-cancer"
+    },
+    {
+      "name": "Melanoma",
+      "url": "https://example.com/cancer/melanoma"
+    },
+    {
+      "name": "Lymphoma",
+      "url": "https://example.com/cancer/lymphoma"
+    },
+    {
+      "name": "Kidney Cancer",
+      "url": "https://example.com/cancer/kidney-cancer"
+    }
+  ]
+}
