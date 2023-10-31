@@ -26,11 +26,18 @@ jobs:
         aws s3 cp s3://popular-articles/articles.json popular-articles.json
       working-directory: ${{ github.workspace }}
 
-    - name: Commit and push JSON to repository
+    - name: Check if S3 data is different from existing Git data
+      id: diff-check
+      run: |
+        git diff --quiet popular-articles.json || echo "::set-output name=changed::true"
+      working-directory: ${{ github.workspace }}
+
+    - name: Commit and push JSON to repository if data has changed
+      if: steps.diff-check.outputs.changed == 'true'
       run: |
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
         git add popular-articles.json
-        git commit -m "Update JSON data"
+        git commit -m "Update popular articles json data"
         git push
       working-directory: ${{ github.workspace }}
