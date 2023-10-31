@@ -1,6 +1,10 @@
 {
   "articles": [
     {
+      "name": "Kidney Cancer",
+      "url": "https://example.com/cancer/kidney-cancer"
+    },
+    {
       "name": "Bladder Cancer",
       "url": "https://example.com/cancer/bladder-cancer"
     },
@@ -13,12 +17,8 @@
       "url": "https://example.com/cancer/melanoma"
     },
     {
-      "name": "Lymphoma",
-      "url": "https://example.com/cancer/lymphoma"
-    },
-    {
-      "name": "Kidney Cancer",
-      "url": "https://example.com/cancer/kidney-cancer"
+      "name": "Pancreatic Cancer",
+      "url": "https://example.com/cancer/pancreatic-cancer"
     }
   ]
 }
