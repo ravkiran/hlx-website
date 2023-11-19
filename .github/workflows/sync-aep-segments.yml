@@ -20,6 +20,6 @@ jobs:
           aio_console_ims_org_id: ${{ secrets.aio_console_ims_org_id }}
           aio_console_technical_account_email: ${{ secrets.aio_console_technical_acccount_email }}
           aio_console_technical_account_id: ${{ secrets.aio_console_technical_acccount_id }}
-          git_pat_token: ${{ secrets.git_path_token }}
+          git_pat_token: ${{ secrets.git_pat_token }}
           git_repo: ${{ github.repository }}
           git_ref: ${{ github.ref_name }}
