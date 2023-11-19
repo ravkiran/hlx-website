@@ -1,0 +1,25 @@
+name: Sync AEP Segments
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Run every 5 minutes
+  workflow_dispatch:  # Enable manual triggering
+
+  
+jobs:
+  sync-with-aep:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync Segments from AEP
+        uses: rpapani/aem-experiments-gh-actions/aep-sync@main
+        with:
+          aio_console_client_id: ${{ secrets.aio_console_client_id }}
+          aio_console_client_secret: ${{ secrets.aio_console_client_secret }}
+          aio_console_ims_org_id: ${{ secrets.aio_console_ims_org_id }}
+          aio_console_technical_account_email: ${{ secrets.aio_console_technical_acccount_email }}
+          aio_console_technical_account_id: ${{ secrets.aio_console_technical_acccount_id }}
+          git_pat_token: ${{ secrets.git_path_token }}
+          git_repo: ${{ github.repository }}
+          git_ref: ${{ github.ref_name }}
