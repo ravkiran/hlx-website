@@ -23,4 +23,4 @@ jobs:
           git_pat_token: ${{ secrets.git_pat_token }}
           git_repo: ${{ github.repository }}
           git_ref: ${{ github.ref_name }}
-          segments_path: 'scripts/all_segments.json'
+          segments_path: scripts/all_segments.json
