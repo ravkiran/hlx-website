@@ -13,7 +13,6 @@ jobs:
       - name: Fetch RUM insights for experiment
         uses: adobe-rnd/aem-experiments-gh-actions/fetch-rum-insights@ruminsights
         with:
-          aio_console_client_id: ${{ secrets.aio_console_client_id }}
           domain-key: ${{ secrets.rum_domain_key }}
           domain: 'www.maidenform.com'
           url: 'https://www.maidenform.com/m'
