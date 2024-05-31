@@ -1,0 +1,20 @@
+name: Fetch RUM insights
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Run every 5 minutes
+  workflow_dispatch:  # Enable manual triggering
+
+  
+jobs:
+  fetch-rum-insights:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch RUM insights for experiment
+        uses: adobe-rnd/aem-experiments-gh-actions/fetch-rum-insights@ruminsights
+        with:
+          aio_console_client_id: ${{ secrets.aio_console_client_id }}
+          domain-key: ${{ secrets.rum_domain_key }}
+          domain: 'www.maidenform.com'
+          url: 'https://www.maidenform.com/m'
+          days: 30
