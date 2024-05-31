@@ -2,7 +2,7 @@ name: Fetch RUM insights
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Run every 5 minutes
+    - cron: '0 */12 * * *'  # Run every 12 hours
   workflow_dispatch:  # Enable manual triggering
 
   
