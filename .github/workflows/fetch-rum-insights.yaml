@@ -15,5 +15,4 @@ jobs:
         with:
           domain-key: ${{ secrets.rum_domain_key }}
           domain: 'www.maidenform.com'
-          url: 'https://www.maidenform.com/m'
           days: 30
