@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Fetch RUM insights for experiment
-        uses: adobe-rnd/aem-experiments-gh-actions/fetch-rum-insights@main
+        uses: adobe-rnd/aem-experiments-gh-actions/fetch-rum-insights@rumdata_concurrent
         with:
           domain-key: ${{ secrets.rum_domain_key }}
           domain: 'www.maidenform.com'
