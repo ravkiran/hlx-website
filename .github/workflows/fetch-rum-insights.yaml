@@ -14,5 +14,5 @@ jobs:
         uses: adobe-rnd/aem-experiments-gh-actions/fetch-rum-insights@rumdata_concurrent
         with:
           domain-key: ${{ secrets.rum_domain_key }}
-          domain: 'www.maidenform.com'
-          days: 30
+          domain: 'www.petplace.com'
+          days: 120
